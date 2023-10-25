@@ -6,7 +6,7 @@ const config = {
 	semi: true,
 	singleQuote: false,
 	jsxSingleQuote: false,
-	arrowParens: "avoid",
+	arrowParens: "always",
 };
 
 module.exports = config;
