@@ -1,6 +1,11 @@
-import { defineConfig } from 'vite';
-import solidPlugin from 'vite-plugin-solid';
-// import devtools from 'solid-devtools/vite';
+import { defineConfig } from "vite";
+import solidPlugin from "vite-plugin-solid";
+import path from "path";
+import { fileURLToPath } from "url";
+// import devtools from "solid-devtools/vite";
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [
@@ -15,6 +20,13 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    target: 'esnext',
+    target: "esnext",
   },
+  resolve: {
+    alias: {
+      "@/components": path.resolve(__dirname, "./src/components"),
+      "@/configs": path.resolve(__dirname, "./src/configs"),
+      "@/pages": path.resolve(__dirname, "./src/pages")
+    }
+  }
 });
