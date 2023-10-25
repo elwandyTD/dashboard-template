@@ -1,9 +1,12 @@
+import Container from "@/components/Container";
 import { type Component } from "solid-js";
 
 const Transactions: Component = () => {
 	return (
-		<div>Transactions Page</div>
-	)
-}
+		<Container title="Transactions">
+			<div>Transactions Page</div>
+		</Container>
+	);
+};
 
 export default Transactions;
