@@ -4,7 +4,7 @@ import { Title } from "@solidjs/meta";
 
 const Dashboard: Component = () => {
 	return (
-		<div>
+		<div class="w-screen h-screen">
 			<Outlet />
 			<Title>Metaverse</Title>
 		</div>
