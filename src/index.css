@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		--white: #F7F7F7;
+		--black: #0A0A0A;
+	}
+}
+
+@layer base {
+	body {
+		@apply w-screen h-screen font-raleway overflow-hidden;
+	}
+}
